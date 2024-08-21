@@ -1,0 +1,76 @@
+.controls {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.statistics {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#canvas {
+  width: 100vw;
+  height: 100vh;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.controls button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  pointer-events: auto;
+}
+
+.controls button mat-icon {
+  margin-right: 8px;
+}
+
+.controls button span {
+  line-height: 24px;
+}
+
+.controls button[disabled] {
+  opacity: 0.5;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: not-allowed;
+}
+
+.controls button[disabled] mat-icon {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+::ng-deep .mat-mdc-tooltip {
+  font-size: 14px;
+  background-color: rgba(97, 97, 97, 0.9);
+}
+
+.tooltip {
+  position: fixed;
+  top: 50px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
