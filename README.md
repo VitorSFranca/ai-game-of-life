@@ -1,5 +1,9 @@
 # Conway's Game of Life - Angular Implementation
 
+
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/vitorsfranca/ai-game-of-life/actions)
+[![Live Demo](https://img.shields.io/badge/online-yes-brightgreen)](https://vitorsfranca.github.io/ai-game-of-life/)
+
 ## 🌟 Overview
 
 This project is an interactive implementation of Conway's Game of Life using Angular and TypeScript. It showcases modern web development techniques, reactive programming, and cellular automaton simulation.
@@ -64,29 +68,24 @@ endLine: 92
 
 ## 🚦 Getting Started
 
-1. Clone the repository
-2. Run `npm install` to install dependencies
-3. Use `ng serve` to start the development server
-4. Navigate to `http://localhost:4200/` in your browser
+- Clone the repository
+- Run `npm install` to install dependencies
+- Use `ng serve` to start the development server
+- Navigate to `http://localhost:4200/` in your browser
 
 ## 🚀 Future Enhancements
 
 While this AI-generated Game of Life implementation is fully functional, there are numerous exciting possibilities for future enhancements. The following features are being considered for future iterations, all of which would be implemented using the same AI-assisted development process:
 
-1. User-defined patterns: Allow users to draw or import custom initial patterns.
-2. Color themes: Implement various color schemes, possibly with day/night cycles.
-3. Speed control: Add a slider to adjust simulation speed.
-4. Zoom and pan: Enable users to explore larger grids more easily.
-5. Statistics graphs: Visualize population trends over time.
-6. Save/load functionality: Persist grid states between sessions.
-7. Automatic pattern recognition: Identify and label common Game of Life patterns.
-8. Multi-state cells: Explore variations with more than two cell states.
-9. Boundary conditions: Implement different grid boundary behaviors.
-10. Mobile responsiveness: Optimize the UI for various device sizes.
-11. Performance benchmarks: Analyze and optimize for maximum grid sizes and update speeds.
-12. Accessibility improvements: Ensure the game is usable for all players.
-13. Community contributions: Establish guidelines for open-source contributions.
-14. Comparative analysis: Benchmark against other Game of Life implementations.
+- [ ] User-defined patterns: Allow users to draw or select known patterns
+- [ ] Color themes: Implement various color schemes, possibly with day/night cycles.
+- [ ] Speed control: Add a slider to adjust simulation speed.
+- [ ] Zoom and pan: Enable users to explore larger grids more easily.
+- [ ] Statistics graphs: Visualize population trends over time.
+- [ ] Automatic pattern recognition: Identify and label common Game of Life patterns.
+- [ ] Multi-state cells: Explore variations with more than two cell states.
+- [ ] Performance benchmarks: Analyze and optimize for maximum grid sizes and update speeds.
+- [ ] Accessibility improvements: Ensure the game is usable for all players.
 
 These enhancements are part of our ongoing commitment to improve and expand the project using AI-assisted development techniques.
 
