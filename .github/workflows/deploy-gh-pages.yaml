@@ -1,0 +1,30 @@
+name: deploy to gh-pages
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  deploy-gh-pages:
+    name: Deploy to GH Pages
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      pages: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      CI: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+      - run: npm ci
+      - run: ng build --base-href /ai-game-of-life
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: "dist/game-of-life"
+      - uses: actions/deploy-pages@v4
