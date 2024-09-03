@@ -25,7 +25,8 @@ jobs:
       - run: npm install
       - run: npm install -g @angular/cli
       - run: |
-          REPO_NAME="${{ github.repository }}"
+          FULL_REPO_NAME="${{ github.repository }}"
+          REPO_NAME=$(echo "$FULL_REPO_NAME" | cut -d'/' -f2)
           OWNER_NAME="${{ github.repository_owner }}"
           BASE_HREF="https://${OWNER_NAME}.github.io/${REPO_NAME}/"
           ng build --base-href="$BASE_HREF"
