@@ -24,7 +24,7 @@ jobs:
           node-version-file: ".nvmrc"
       - run: npm install
       - run: npm install -g @angular/cli
-      - run: ng build --base-href /ai-game-of-life
+      - run: ng build --base-href="https://matheusaraujo.github.io/ai-game-of-life/"
       - uses: actions/upload-pages-artifact@v3
         with:
           path: "dist/game-of-life/browser"
