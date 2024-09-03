@@ -1,0 +1,36 @@
+name: deploy to gh-pages
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  deploy-gh-pages:
+    name: Deploy to GH Pages
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      pages: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      CI: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+      - run: npm install
+      - run: npm install -g @angular/cli
+      - run: |
+          FULL_REPO_NAME="${{ github.repository }}"
+          REPO_NAME=$(echo "$FULL_REPO_NAME" | cut -d'/' -f2)
+          OWNER_NAME="${{ github.repository_owner }}"
+          BASE_HREF="https://${OWNER_NAME}.github.io/${REPO_NAME}/"
+          ng build --base-href="$BASE_HREF"
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: "dist/game-of-life/browser"
+      - uses: actions/deploy-pages@v4
